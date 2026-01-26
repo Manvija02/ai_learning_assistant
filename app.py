@@ -12,7 +12,7 @@ st.set_page_config(page_title="AI Learning Assistant", layout="wide")
 st.title("📘 AI-Powered Learning Assistant")
 st.write("Upload a course PDF to generate quizzes, flashcards, and explanations.")
 
-# ---------- Helper to safely extract JSON ----------
+
 def extract_json(text):
     start = text.find("[")
     end = text.rfind("]")
@@ -20,7 +20,7 @@ def extract_json(text):
         return None
     return text[start:end + 1]
 
-# ---------- Session state ----------
+
 if "content" not in st.session_state:
     st.session_state.content = None
 if "mode" not in st.session_state:
@@ -55,15 +55,15 @@ if uploaded_file:
             st.session_state.content = generate_explanation(text)
             st.session_state.mode = "Explanation"
 
-# ---------- Render Output ----------
+
 if st.session_state.content is not None:
     st.subheader("Generated Output")
 
-    # ---------- EXPLANATION ----------
+ 
     if st.session_state.mode == "Explanation":
         st.write(st.session_state.content)
 
-    # ---------- QUIZ ----------
+   
     elif st.session_state.mode == "Quiz":
         score = 0
 
@@ -76,7 +76,7 @@ if st.session_state.content is not None:
                 key=f"quiz_{i}"
             )
 
-            # Convert selected option → letter (A/B/C/D)
+            
             selected_index = q["options"].index(selected)
             selected_letter = chr(ord("A") + selected_index)
 
@@ -99,7 +99,7 @@ if st.session_state.content is not None:
             f"## 🎯 Final Score: {score} / {len(st.session_state.content)}"
         )
 
-    # ---------- FLASHCARDS ----------
+   
     elif st.session_state.mode == "Flashcards":
         st.markdown("## 🧠 Flashcards")
 
