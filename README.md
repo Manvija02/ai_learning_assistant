@@ -51,15 +51,6 @@ This project was built from scratch with a focus on real-world engineering chall
      * Plain-text explanations
 
 
-## Key Engineering Challenges Solved
-
-* PDFs are not plain text: implemented reliable text extraction using PyMuPDF
-* LLM responses are non-deterministic: added safe JSON extraction and validation
-* Streamlit reruns on every interaction: used session state to persist content
-* LLM provider instability: designed a provider-agnostic LLM abstraction layer
-* Answer format mismatch (A/B/C/D vs text): implemented correct option mapping logic
-
-
 ## Setup Instructions
 
 ### 1. Clone the Repository
@@ -86,3 +77,4 @@ export GROQ_API_KEY="your_api_key_here"
 ```bash
 python -m streamlit run app.py
 ```
+
