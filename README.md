@@ -87,15 +87,6 @@ Open your browser and go to:
 
     http://localhost:8501
 
-------------------------------------------------------------------------
-
-## Docker Environment
-
-| Component \| Description \|
-
-\|-----------\|-------------\| Base Image \| Python 3.10 Slim \| \| Port
-\| 8501 \| \| Framework \| Streamlit \| \| Environment Variable \|
-GROQ_API_KEY \|
 
 ------------------------------------------------------------------------
 
@@ -108,7 +99,3 @@ GROQ_API_KEY \|
 
 ------------------------------------------------------------------------
 
-## Author
-
-Sai Manvija Cherukuri\
-MS Computer Science -- NC State University
