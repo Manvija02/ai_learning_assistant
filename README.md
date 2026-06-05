@@ -5,7 +5,7 @@ lecture slides, notes) and generates quizzes, flashcards, and
 explanations using Large Language Models.
 
 The application uses Streamlit for the UI, PyMuPDF for PDF text
-extraction, and Groq LLM APIs for content generation. The entire
+extraction, and Grok LLM APIs for content generation. The entire
 application is containerized using Docker, enabling reproducible
 deployment across environments.
 
@@ -28,7 +28,7 @@ deployment across environments.
 -   Python
 -   Streamlit
 -   PyMuPDF
--   Groq API
+-   Grok API
 -   Docker
 
 ------------------------------------------------------------------------
@@ -57,11 +57,11 @@ deployment across environments.
 
     pip install -r requirements.txt
 
-### 3. Set your Groq API key
+### 3. Set your Grok API key
 
 Create a `.env` file:
 
-    GROQ_API_KEY=your_api_key_here
+    GROK_API_KEY=your_api_key_here
 
 ### 4. Run the application
 
@@ -81,7 +81,7 @@ Open your browser and go to:
 
 ### Run the Docker container
 
-    docker run -p 8501:8501 -e GROQ_API_KEY=your_api_key ai-learning-assistant
+    docker run -p 8501:8501 -e GROK_API_KEY=your_api_key ai-learning-assistant
 
 ### Open the application
 
